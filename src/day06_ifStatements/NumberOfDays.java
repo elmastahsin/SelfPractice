@@ -3,6 +3,27 @@ package day06_ifStatements;
 public class NumberOfDays {
     public static void main(String[] args) {
         int number = 1;
+
+        boolean has28days = number==2;
+        boolean has30days = number ==4 || number==6||number==9||number==11;
+        boolean has31days = !has30days && !has28days;
+        String result ="";
+
+        if (has31days){
+            result = "31 days";
+        }
+        if (has28days){
+            result = "28 days";
+
+        }
+        if (has30days){
+            result = "30 days";
+
+        }
+        System.out.println("result = " + result);
+
+
+        System.out.println("******Another Answer********");
         if (number == 1) {
             System.out.println("31");
         }
