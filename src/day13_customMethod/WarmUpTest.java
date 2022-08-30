@@ -4,12 +4,18 @@ import java.util.Scanner;
 
 public class WarmUpTest {
     public static void main(String[] args) {
+        Scanner input =  new Scanner(System.in);
         calculate(200, 5, '/');
-        calculate(200,18,'*');
-        System.out.println("*******************");
+        calculate(200, 18, '*');
+        System.out.println("Enter your two number and a math operator:");
+        double n1 = input.nextDouble();
+        double n2 = input.nextDouble();
+        char operator = input.next().charAt(0);
+        calculate(n1, n2, operator);
+        System.out.println("*********************");
         ageGroup(155);
-        System.out.println("******************");
-        eligibleToVote(24,true);
+        System.out.println("*********************");
+        eligibleToVote(24, true);
     }
 
     public static void calculate(double num1, double num2, char operator) {
@@ -17,21 +23,27 @@ public class WarmUpTest {
         switch (operator) {
             case '+':
                 sum = num1 + num2;
+                System.out.println(num1 + " " + operator + " " + num2 + " = " + sum);
                 break;
             case '-':
                 sum = num1 - num2;
+                System.out.println(num1 + " " + operator + " " + num2 + " = " + sum);
+
                 break;
             case '*':
                 sum = num1 * num2;
+                System.out.println(num1 + " " + operator + " " + num2 + " = " + sum);
+
                 break;
             case '/':
                 sum = num1 / num2;
+                System.out.println(num1 + " " + operator + " " + num2 + " = " + sum);
+
                 break;
             default:
                 System.err.println("Invalid Input");
                 break;
         }
-        System.out.println(num1 + " " + operator + " " + num2 + " = " + sum);
         /*1. Create a method named calculate that can take three arguments:
         num1 (double)
         num2 (double)
@@ -74,7 +86,7 @@ public class WarmUpTest {
     }
 }
 /*Methods: grouping code fargments  ===> creating function
-											MUST         MUST
+										MUST            MUST
 		Access-Modifier   Specifier    Return-type    methodName(Parameter){
 				Code fragments
 		}
