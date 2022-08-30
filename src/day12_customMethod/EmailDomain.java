@@ -7,3 +7,9 @@ public class EmailDomain {
         System.out.println("domain = " + domain);
     }
 }
+/*1. Create a method named emailDomain that can display the domain of the email
+    Ex:
+        emailDomain("Cydeo@gmail.com")
+
+        output:
+            domain: gmail*/
