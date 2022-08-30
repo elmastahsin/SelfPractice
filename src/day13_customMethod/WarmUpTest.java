@@ -7,15 +7,15 @@ public class WarmUpTest {
         Scanner input =  new Scanner(System.in);
         calculate(200, 5, '/');
         calculate(200, 18, '*');
-        System.out.println("Enter your two number and a math operator:");
-        double n1 = input.nextDouble();
-        double n2 = input.nextDouble();
-        char operator = input.next().charAt(0);
-        calculate(n1, n2, operator);
+       // System.out.println("Enter your two number and a math operator:");
+      //  double n1 = input.nextDouble();
+       // double n2 = input.nextDouble();
+       // char operator = input.next().charAt(0);
+       // calculate(n1, n2, operator);
         System.out.println("*********************");
         ageGroup(155);
         System.out.println("*********************");
-        eligibleToVote(24, true);
+        eligibleToVote(18, true);
     }
 
     public static void calculate(double num1, double num2, char operator) {
