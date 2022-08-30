@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class Main {
         public static void main(String[] args) {
             String firstName = "Noah";
@@ -23,6 +24,18 @@ public class Main {
             System.out.println ("Your email is " + email);
             System.out.println ("Your base salary is $" + salary + " and after 2 years it will be $" + salaryAfter2Years);
             System.out.println("Welcome aboard, see you at " + officeAddress);
+
+            //DO NOT TOUCH THESE LINES. TEACHER NEEDS THEM TO TEST YOUR CODE:
+            // Variables are already declared and given
+            Scanner scan=new Scanner(System.in);
+            int areaCode=scan.nextInt();
+            int localNumber=scan.nextInt();
+
+            String phoneNumber;
+            //WRITE YOUT CODE HERE:
+
+            phoneNumber = "("+areaCode+")-"+localNumber;
+            System.out.println(phoneNumber);
 
         }
     }
