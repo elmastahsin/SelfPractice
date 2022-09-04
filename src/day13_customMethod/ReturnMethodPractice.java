@@ -3,7 +3,8 @@ package day13_customMethod;
 public class ReturnMethodPractice {
     public static void main(String[] args) {
         int num = 12;
-        isOdd(num);
+        System.out.println(num + " is Odd: " + isOdd(num));
+        System.out.println(num + " is Even :" + isEven(num));
 
     }
     public static boolean isOdd(int num){
@@ -12,6 +13,13 @@ public class ReturnMethodPractice {
             isOdd = true;
         }
         return isOdd;
+    }
+    public static boolean isEven ( int num){
+        boolean isEven = false ;
+        if (num % 2 == 1 ){
+            isEven = true;
+        }
+        return isEven;
     }
 
 }
