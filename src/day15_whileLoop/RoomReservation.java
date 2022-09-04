@@ -5,11 +5,12 @@ import java.util.Scanner;
 public class RoomReservation {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+        int total = 0;
         System.out.println("Would you like to reserve a room ? ");
-        String answer = input.next().toLowerCase();
+        String answer = input.nextLine().toLowerCase();
         while (!(answer.equals("yes")||answer.equals("no"))){
             System.out.println("Would you like to reserve a room ? ");
-            String answer = input.next().toLowerCase();
+            String room = input.nextLine().toLowerCase();
         }
         if (answer.equals("yes")) {
 
@@ -20,10 +21,15 @@ public class RoomReservation {
 
             String room = input.nextLine().toLowerCase();
 
-            if (room =)
+            while (!(room.equals("king bed") || room.equals("queen bed") || room.equals("single bed"))) {
+                System.out.println("Invalid Entry, Please Re-Enter");
+                room = input.nextLine().toLowerCase();
+            } // to make sure user selected either the king bed, or queen bed or single bed
+            total += (room.equals("king bed")) ? 120 : (room.equals("queen bed")) ? 100 : 80;
         }else if (answer.equals("no")){
-            System.out.println();
+            System.out.println("have a nice day");
         }
+        System.out.println(total);
 
     }
 }
