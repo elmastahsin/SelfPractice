@@ -5,12 +5,13 @@ import java.util.Scanner;
 public class RoomReservation {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int total = 0;
+        int totalPrice = 0;
         System.out.println("Would you like to reserve a room ? ");
-        String answer = input.nextLine().toLowerCase();
-        while (!(answer.equals("yes")||answer.equals("no"))){
-            System.out.println("Would you like to reserve a room ? ");
-            String room = input.nextLine().toLowerCase();
+        String answer = input.next().toLowerCase();
+        while (!(answer.equals("yes") || answer.equals("no"))){
+            System.err.println("Invalid answer . Would you like to reserve a room ? ");
+            answer = input.next().toLowerCase();
+
         }
         if (answer.equals("yes")) {
 
@@ -25,15 +26,15 @@ public class RoomReservation {
                 System.out.println("Invalid Entry, Please Re-Enter");
                 room = input.nextLine().toLowerCase();
             } // to make sure user selected either the king bed, or queen bed or single bed
-            total += (room.equals("king bed")) ? 120 : (room.equals("queen bed")) ? 100 : 80;
+            totalPrice = (room.equals("king bed")) ? 120 : (room.equals("queen bed")) ? 100 : 80;
         }else if (answer.equals("no")){
             System.out.println("have a nice day");
         }
-        System.out.println(total);
+        System.out.println(totalPrice);
 
     }
 }
-/*8. Create a class called RommReservation,
+/*8. Create a class called RoomReservation,
  write a program for the room reservation,
  your program asks the user wants to reserve a room.
     	if user entered yes, then ask which type of room the user wants to reserve.

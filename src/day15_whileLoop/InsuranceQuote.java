@@ -27,8 +27,7 @@ public class InsuranceQuote {
         }
         System.out.println("how many miles do you drive in a day");
         int miles = input.nextInt();
-        while (miles < 0 || miles < 5) {
-
+        while (miles < 5) {
             System.err.println("Invalid entry. How many miles do you drive in a day");
             miles = input.nextInt();
         }
@@ -92,7 +91,7 @@ public class InsuranceQuote {
             discountRate += 0.05;
         }
         if (hadAccidentOrClaims.equals("yes")){
-            discountRate += 0.15;
+            discountRate -= 0.15;
         }else {
             discountRate +=0.1;
         }
