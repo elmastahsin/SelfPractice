@@ -1,0 +1,23 @@
+
+				Insurance Quote calculation:
+					starting prices for liability:
+						age < 25 ===> 90
+						age >= 25 ==> 50
+
+						miles <= 10 ====> $10
+					    miles > 10 and miles <= 50 ==> $30
+					    miles > 50 ===>  $50
+
+					starting prices for full coverage:
+						age < 25 ===> 160
+						age >= 25 ==> 120
+
+						miles <= 10 ====> $20
+					    miles > 10 and miles <= 50 ==> $40
+					    miles > 50 ===>  $70
+
+
+				    If the car has anti-theft device ==> 5% discount
+				    If he/she had any accidents or claims in past 5 years ===> 15% extra charge
+				    If he/she never had any accidents or claims in past 5 years ==> 10% discount
+				    If he/she is married ==> 5% discount*/
