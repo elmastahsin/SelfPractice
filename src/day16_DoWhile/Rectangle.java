@@ -36,6 +36,7 @@ public class Rectangle {
         }
     } while (answer.equals("yes"));
         System.out.println("Thank you for using Cydeo Rectangle Calculator APP");
+        System.exit(1);
     }
 }
 /*

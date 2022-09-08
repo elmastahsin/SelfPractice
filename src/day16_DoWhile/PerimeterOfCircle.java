@@ -30,6 +30,7 @@ public class PerimeterOfCircle {
             }
         } while (answer.equals("yes"));
         System.out.println("Thank you for using Cydeo Circle Calculator APP");
+        System.exit(1);
     }
 
 }

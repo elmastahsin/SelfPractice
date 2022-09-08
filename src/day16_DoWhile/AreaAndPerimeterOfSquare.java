@@ -27,7 +27,9 @@ public class AreaAndPerimeterOfSquare {
             }
         } while (answer.equals("yes"));
         System.out.println("Thank you for using Cydeo Square Calculator APP");
+        System.exit(1);
     }
+
 }
 /*
 * 5. Write a program that can calculate the area and perimeter of a Square:
