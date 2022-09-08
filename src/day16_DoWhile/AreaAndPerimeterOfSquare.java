@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class AreaAndPerimeterOfSquare {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        String answer = "";
+       String answer ="";
         do {
             System.out.println("Enter the side of square: ");
             double side = input.nextDouble();
@@ -16,14 +16,17 @@ public class AreaAndPerimeterOfSquare {
             }
             double area = side * side;
             double perimeter = side * 4;
-
+            System.out.println("perimeter = " + perimeter);
+            System.out.println("area = " + area);
+            System.out.println("Would you like to calculate another square?");
+            answer = input.next().toLowerCase();
             while (!(answer.equals("yes") || answer.equals("no"))) {
                 System.err.println("Invalid Entry ");
-                System.out.println("Would you like to calculate another circle?");
+                System.out.println("Would you like to calculate another square?");
                 answer = input.next().toLowerCase();
             }
         } while (answer.equals("yes"));
-        System.out.println("Thank you for using Cydeo Circle Calculator APP");
+        System.out.println("Thank you for using Cydeo Square Calculator APP");
     }
 }
 /*
