@@ -1,10 +1,11 @@
 package day17_customMethod;
 
 public class Address {
-    public String buildingNumber,  street, city , state, zipCode;
+    public String buildingNumber, street, city, state, zipCode;
 
+    public static String country = "United States", planet = " Earth";
 
-    public void setInfo (String buildingNumber, String street, String city, String state, String zipCode) {
+    public void setInfo(String buildingNumber, String street, String city, String state, String zipCode) {
         this.buildingNumber = buildingNumber;
         this.street = street;
         this.city = city;
@@ -14,13 +15,7 @@ public class Address {
 
     @Override
     public String toString() {
-        return "Address{" +
-                "buildingNumber='" + buildingNumber + " " +
-                ", street='" + street + "\n" +
-                ", city='" + city + " " +
-                ", state='" + state + ", " +
-                ", zipCode='" + zipCode + '\'' +
-                '}';
+        return buildingNumber + " " + street + "\n" + city + " " + state + ", " + zipCode;
     }
 }
 /*5. Create a class named Address
