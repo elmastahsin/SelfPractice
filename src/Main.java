@@ -42,38 +42,35 @@ public class Main {
    }*/
     public static void main(String[] args) {
 
-        Scanner input = new Scanner(System.in);
-        String answer = "";
+        String[] items = {"Shoes", "Jacket", "Gloves", "AirPods", "iPad", "iPhone 12 case"};
+        double[] prices = {99.99, 150.0, 9.99, 250.0, 439.50, 39.99};
+        int[] itemIDs = {12345, 12346, 12347, 12348, 12349, 12350};
 
-        do {
-            System.out.println("Enter your first number");
-            double num1 = input.nextDouble();
+        int indexNumOfGloves = -1;
+        boolean hasIPad = false;
+        String report = "";
 
-            System.out.println("Enter the math operator");
-            String op = input.next();
+        for (int i = 0; i < items.length; i++) {
+            String itemName = items[i];
+            double itemPrice = prices[i];
+            int itemID = itemIDs[i];
 
-            while ((op.length() != 1) && !( op.equals("/") || op.equals("*") || op.equals("+") || op.equals("-"))) {
-                System.err.println("Invalid operator, try again");
-                op = input.next();
+            if (itemName.equals("Gloves")) {
+                indexNumOfGloves = i;
             }
 
-            System.out.println("Enter your second number");
-            double num2 = input.nextDouble();
-
-            double result = op.equals("/") ? num1 / num2 : op.equals("*")  ? num1 * num2
-                    : op.equals("-")? num1 - num2 : num1 + num2;
-            System.out.println("Result = " + result);
-
-            System.out.println("Would you like to continue? Yes/No");
-            answer = input.next().toLowerCase();
-
-            while (!(answer.equals("yes") || answer.equals("no"))) {
-                System.err.println("Invalid answer, try again");
-                answer = input.next().toLowerCase();
+            if (itemName.equals("iPad")) {
+                hasIPad = true;
             }
 
-        } while (answer.equals("yes"));
-        System.out.println("Good Bye");
+            report += itemName + " - " + itemPrice + " - #" + itemID + "\n";
+
+        }
+
+
+        System.out.println("indexNumOfGloves = " + indexNumOfGloves);
+        System.out.println("hasIPad = " + hasIPad);
+        System.out.println(report);
 
 
     }
