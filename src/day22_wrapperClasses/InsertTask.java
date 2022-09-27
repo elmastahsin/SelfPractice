@@ -8,7 +8,8 @@ public class InsertTask {
 
       int []result =  insert(arr, 2, 100);
         System.out.println(Arrays.toString(result));
-
+        int []result2 =  insert(arr, 4, 1982);
+        System.out.println(Arrays.toString(result2));
     }
 
     public static int[] insert(int[] array, int index, int element) {
