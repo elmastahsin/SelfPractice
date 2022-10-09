@@ -8,7 +8,7 @@ public class Dog {
     public static int numberOfLegs,numberOfEyes,numberOfWings;
     public static boolean isFriendly;
 
-    public Dog(String name, String breed, String size, String color, int age, char gender) {
+    public Dog(String name, String breed, String size, char gender,int age, String color) {
         this.name = name;
         this.breed = breed;
         this.size = size;
