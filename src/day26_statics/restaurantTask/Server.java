@@ -15,6 +15,7 @@ public class Server {
         this.hourlyRate = hourlyRate;
         this.isFullTime = isFullTime;
         this.hireDate = hireDate;
+
     }
 
     public void takeOrder(){
