@@ -1,4 +1,4 @@
-package day25_constructors.salaryCalculator;
+package day25_constructors.salaryCalculatorTask;
 
 public class Test {
     public static void main(String[] args) {
