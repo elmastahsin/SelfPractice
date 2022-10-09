@@ -4,24 +4,24 @@ public class SalaryCalculator {
 
     public double hourlyRate;
     public int weeklyHours;
-    public double stateTax;
-    public double federalTax;
+    public double stateTaxRate;
+    public double federalTaxRate;
 
     public SalaryCalculator(double hourlyRate, int weeklyHours, double stateTax, double federalTax) {
         this.hourlyRate = hourlyRate;
         this.weeklyHours = weeklyHours;
-        this.stateTax = stateTax;
-        this.federalTax = federalTax;
+        this.stateTaxRate = stateTax/100;
+        this.federalTaxRate = federalTax/100;
     }
 
     public double salary(){
         return (hourlyRate * weeklyHours)*52;
     }
     public double stateTax(){
-        return salary()*stateTax;
+        return salary()* stateTaxRate;
     }
     public double federalTax(){
-        return salary()*federalTax;
+        return salary()* federalTaxRate;
     }
     public double salaryAfterTax(){
         return salary()- (stateTax()+federalTax());
