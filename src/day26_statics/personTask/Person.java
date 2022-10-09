@@ -5,8 +5,11 @@ public class Person {
     public int age ;
     public char gender;
 
-    public static boolean isHuman, hasNose,hasWings;
-    public static int numberOfHead, numberOfEyes;
+    public static boolean isHuman=true;
+    public static boolean hasNose=true;
+    public static boolean hasWings=false;
+    public static int numberOfHead=1;
+    public static int numberOfEyes=2;
 
 
     public Person(String name, int age, char gender) {
