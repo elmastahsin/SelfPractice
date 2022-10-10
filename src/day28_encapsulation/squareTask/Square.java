@@ -3,6 +3,10 @@ package day28_encapsulation.squareTask;
 public class Square {
     private double side;
 
+    public Square(double side) {
+        setSide(side);
+    }
+
     public double getSide() {
         return side;
     }
@@ -12,6 +16,21 @@ public class Square {
             System.err.println("Invalid  side" +side);
         }
         this.side = side;
+    }
+    public double calcArea(){
+        return side*side;
+    }
+    public double calcPerimeter(){
+        return side*4;
+    }
+
+    @Override
+    public String toString() {
+        return "Square{" +
+                "side=" + side +
+                "area=" + calcArea() +
+                "perimeter=" + calcPerimeter()+
+                '}';
     }
 }
 /*2. Create a class named Square:
