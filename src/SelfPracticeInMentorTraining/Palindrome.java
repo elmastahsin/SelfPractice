@@ -15,11 +15,8 @@ public class Palindrome {
             reverseNumber = reverseNumber * 10 + remainder;
             tempNumber = tempNumber / 10;
         }
-        if (number == reverseNumber) {
-            System.out.println(true);
-        } else {
-            System.out.println(false);
-        }
+            System.out.println(number == reverseNumber);
+
 
         /*
         String str = input.nextLine();
@@ -30,9 +27,9 @@ public class Palindrome {
             result += str.charAt(i);
         }
 
-        boolean isPalindrome = str.equalsIgnoreCase(result);
+        // boolean isPalindrome = str.equalsIgnoreCase(result);
 
-        System.out.println(isPalindrome);
+        System.out.println(str.equalsIgnoreCase(result));
 */
 
     }
