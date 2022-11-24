@@ -6,13 +6,13 @@ public class NonRepeat {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter an string :");
+        String str = input.nextLine().toLowerCase();
 
-        String str = input.next().toLowerCase();
         int indexOf = nonRepeating(str);
-        if (indexOf>-1) {
+        if (indexOf > -1) {
             System.out.println("The index of non repeating vovel is :  " + indexOf + " The letter is " + str.charAt(indexOf));
-        }else {
-            System.err.println(indexOf);
+        } else {
+            System.err.println("The is no nonrepeating vovels: " + indexOf);
         }
     }
 
@@ -25,9 +25,11 @@ public class NonRepeat {
             if (isVovel(str.charAt(i))) {
                 uniqueLetter = true;
                 for (int j = 0; j < str.length(); j++) {
-                    if (i != j && (str.charAt(i) == str.charAt(j))) {
-                        uniqueLetter = false;
-                        break;
+                    if (isVovel(str.charAt(j))) {
+                        if (i != j && (str.charAt(i) == str.charAt(j))) {
+                            uniqueLetter = false;
+                            break;
+                        }
                     }
                 }
             }
@@ -38,11 +40,8 @@ public class NonRepeat {
         return -1;
     }
 
-    private static boolean isVovel(char i) {
-        if (i == 'a' || i == 'e' || i == 'i' || i== 'o' || i == 'u'){
-            return true;
-        }
-        return false;
+    public static boolean isVovel(char i) {
+        return (i == 'a' || i == 'e' || i == 'i' || i == 'o' || i == 'u');
     }
 }
 /*Practice Question:
