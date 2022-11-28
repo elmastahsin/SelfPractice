@@ -1,4 +1,4 @@
-package day28_encapsulation.rectangle;
+package day28_encapsulation.rectangleTask;
 
 public class Test {
     public static void main(String[] args) {
