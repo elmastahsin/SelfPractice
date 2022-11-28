@@ -15,10 +15,13 @@ public class Pizza {
     }
 
     public void setSize(String size) {
+        if (size==null){
+            System.err.println("Size can not be null");
+            System.exit(1);
+        }
         if ((!(size.equalsIgnoreCase("small")
                 ||size.equalsIgnoreCase("medium")
-                ||size.equalsIgnoreCase("large")))
-                ||size==null){
+                ||size.equalsIgnoreCase("large")))){
             System.err.println("Invalid size:" + size);
             System.exit(1);
         }
