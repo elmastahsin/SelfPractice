@@ -29,8 +29,19 @@ public class EBook extends Book{
     public void setSize(String size) {
         this.size = size;
     }
-    public void readBook(){
-        System.out.println("reading book..");
+    public void readBook(){ System.out.println("reading " + getTitle());
+    }
+
+    @Override
+    public String toString() {
+        return "EBook{" +
+                "title='" + getTitle() + '\'' +
+                ", type='" + getType() + '\'' +
+                ", author='" + getAuthor() + '\'' +
+                ", price=" + getPrice() +
+                "pages=" + pages +
+                ", size='" + size + '\'' +
+                '}';
     }
 }
 /*2 Create a sub class of Book named EBook:
