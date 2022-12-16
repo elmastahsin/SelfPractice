@@ -1,4 +1,4 @@
-package SelfPracticeInMentorTraining;
+package LeetCodeSolutions;
 
 import java.util.Scanner;
 
