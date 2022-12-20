@@ -16,7 +16,6 @@ public class ProductOfArrayExceptSelf {
 
     public static int[] productExceptSelf(int[] nums) {
 
-
         int[] res = new int[nums.length];
         res[0] = 1;
         for (int i = 1; i < nums.length; i++) {
